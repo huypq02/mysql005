@@ -47,7 +47,9 @@ WHERE EXTRACT(YEAR_MONTH FROM o.OrderDate) = '202405'
 
 -- BAI 7
 --
-
+SELECT CustomerName 
+FROM Customers c 
+WHERE c.CustomerID NOT IN (SELECT CustomerID FROM Orders o)
 
 -- BAI 8
 -- 
